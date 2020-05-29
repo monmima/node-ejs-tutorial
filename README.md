@@ -1,4 +1,4 @@
-# node-ejs-tutorial
+# Intro to EJS
 
 - https://www.youtube.com/watch?v=IqpfBGsALqc&list=PL7sCSgsRZ-slYARh3YJIqPGZqtGVqZRGt
 
