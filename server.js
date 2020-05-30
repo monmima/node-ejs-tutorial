@@ -19,7 +19,24 @@ app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
 app.get("/", function(request, response) {
-    response.render("index");
+    response.render("index", {
+        // insert values
+        foo: "bar",
+
+        // iterate over values
+        people: [
+            { name : "dave" },
+            { name : "jerry" }
+        ],
+
+        // condition
+        animals: [
+            { name : "cat" },
+            { name : "dog" },
+            { name : "horse" },
+            { name : "cow" }
+        ]
+    });
 });
 
 app.listen(3000, function() {

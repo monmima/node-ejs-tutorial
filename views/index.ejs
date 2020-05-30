@@ -4,8 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        h2 {
+            color: green;
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello!</h1>
+    <h1>Fun with EJS</h1>
+
+    <h2>Inserting a variable</h2>
+
+    <p>Hello <%= foo %>!</p>
+
+    <h2>Iterating over values</h2>
+
+    <ul>
+        <% for (let person of people) { %>
+        <li><%= person.name %></li>
+        <% } %>
+    </ul>
+
+    <h2>Condition</h2>
+
+    <ul>
+        <% for (let animal of animals) { %>
+            <% if (animal.name === "dog") { %>
+                <li>This is definitely a <%= animal.name %>!</li>
+            <% } else { %>
+                <li>This is definitely not a dog. This is a <%= animal.name %>!</li>
+            <% } %>
+        <% } %>
+    </ul>
+
+    <h2>Partial view</h2>
+
+    <%- include("partial") %>
+
+    
 </body>
 </html>
